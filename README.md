@@ -114,20 +114,6 @@ plt.tight_layout()
 plt.show()
 
 # -------------------------------------------
-# 🗺️ 6. (Optional) Choropleth Map
-# -------------------------------------------
-# Uncomment if you want to use Plotly for a world map
-# import plotly.express as px
-# latest_all = df.sort_values('date').groupby('location').tail(1)
-# fig = px.choropleth(latest_all,
-#                     locations="location",
-#                     locationmode="country names",
-#                     color="total_cases",
-#                     hover_name="location",
-#                     title="Total COVID-19 Cases by Country")
-# fig.show()
-
-# -------------------------------------------
 # 🧠 7. Insights & Reporting (Use Markdown in Jupyter)
 # -------------------------------------------
 # Example insights (to include as markdown in your notebook):
