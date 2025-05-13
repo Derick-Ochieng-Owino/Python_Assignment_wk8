@@ -1,6 +1,4 @@
-# -------------------------------------------
-# 📦 1. Data Collection
-# -------------------------------------------
+#  1. Data Collection
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,19 +7,14 @@ import seaborn as sns
 # Load dataset from working directory
 df = pd.read_csv("owid-covid-data.csv")
 
-# -------------------------------------------
-# 🧭 2. Data Loading & Exploration
-# -------------------------------------------
+# 2. Data Loading & Exploration
 
 # Explore structure
 print("📌 Columns:", df.columns.tolist())
 print("\n📊 Sample Data:\n", df.head())
 print("\n🔍 Missing Values:\n", df.isnull().sum())
 
-# -------------------------------------------
-# 🧹 3. Data Cleaning
-# -------------------------------------------
-
+# 3. Data Cleaning
 # Keep relevant columns
 columns_of_interest = ['date', 'location', 'total_cases', 'new_cases', 'total_deaths', 'new_deaths', 'total_vaccinations', 'population']
 df = df[columns_of_interest]
@@ -39,9 +32,7 @@ df.fillna(method='ffill', inplace=True)
 countries = ['Kenya', 'United States', 'India']
 df_filtered = df[df['location'].isin(countries)]
 
-# -------------------------------------------
 # 📊 4. Exploratory Data Analysis (EDA)
-# -------------------------------------------
 
 # Plot total cases over time
 plt.figure(figsize=(10, 6))
@@ -84,9 +75,7 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 
-# -------------------------------------------
-# 💉 5. Visualizing Vaccination Progress
-# -------------------------------------------
+# 5. Visualizing Vaccination Progress
 
 plt.figure(figsize=(10, 6))
 for country in countries:
@@ -126,11 +115,6 @@ plt.show()
 #                     title="Total COVID-19 Cases by Country")
 # fig.show()
 
-# -------------------------------------------
-# 🧠 7. Insights & Reporting (Use Markdown in Jupyter)
-# -------------------------------------------
-# Example insights (to include as markdown in your notebook):
-
 """
 # 📌 Key Insights
 
@@ -142,5 +126,4 @@ plt.show()
 
 """
 
-# End of script
 
