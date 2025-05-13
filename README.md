@@ -31,8 +31,8 @@ This project involves:
 - **pandas** – Data manipulation and analysis
 - **matplotlib** – Data visualization
 - **seaborn** – Enhanced statistical plots
-- *(Optional)* plotly – Interactive charts
-- *(Optional)* geopandas – Geospatial analysis
+- **plotly** – Interactive charts
+- **geopandas** – Geospatial analysis
 - **Jupyter Notebook** – Interactive analysis
 
 ---
